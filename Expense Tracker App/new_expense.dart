@@ -103,22 +103,24 @@ class _NewExpenseState extends State<NewExpense> {
                 ),
                 const SizedBox(width: 16),
                 Expanded(
-                    child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      _selectedDate == null
-                          ? 'No date selected'
-                          : formatter.format(_selectedDate!),
-                    ),
-                    IconButton(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        _selectedDate == null
+                            ? 'No date selected'
+                            : formatter.format(_selectedDate!),
+                      ),
+                      IconButton(
                         onPressed: _presentDatePicker,
                         icon: const Icon(
                           Icons.calendar_month,
-                        ))
-                  ],
-                ))
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
             const SizedBox(
